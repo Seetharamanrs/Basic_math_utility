@@ -1,40 +1,58 @@
 # 🛠️ Python Utility Toolkit
 
-A modular, beginner-friendly collection of Python tools combining **math-based** and **basic utility** features. This repository brings together several handy scripts, grouped into two main categories:
-
-- 🧮 **Math Utility Tools**
-- 🧰 **Basic Utility Tools**
+A multi-functional Python toolkit that combines various everyday utilities into one convenient command-line program. Built with modular classes, this tool helps users perform tasks like unit conversion, cipher encryption, matrix operations, scientific calculations, and more!
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
+
 
 ---
 
-## 🔢 Math Utility Tools
+## 🧰 Features
 
-- **📐 Geometry Calculator** – Area & perimeter for circle, triangle, and rectangle.
-- **🧮 Calculator** – Basic arithmetic, square root, factorial, etc.
-- **📊 Statistics Toolkit** – Mean, Median, Mode, Range.
-- **🧠 Quadratic Solver** – Solve and classify roots of quadratic equations.
-- **📈 Matrix Operations** – Add, subtract, transpose matrices.
-- **🔬 Scientific Calculator** – Trigonometric functions, log, exp.
+### 1. **Unit Converter**
+Convert between:
+- Temperature: °C ↔ °F
+- Weight: kg ↔ lb
+- Distance: km ↔ miles
+
+### 2. **Cipher Tool**
+- Caesar Cipher encryption & decryption.
+
+### 3. **Random Number Games**
+- 🎲 Guess the Number (with hints & attempts)
+- 🎲 Dice Roller
+- 🎯 Lottery Simulator (pick N from 1–S)
+- 🪙 Coin Toss
+
+### 4. **Scientific Calculator**
+- Trigonometric: sin, cos, tan
+- Logarithmic & Exponential functions
+
+### 5. **Matrix Calculator**
+- Matrix addition & subtraction (manual and NumPy)
+- Transposition
+
+### 6. **Age & Date Calculator**
+- Calculate age from birthdate
+- Time until next birthday
+- Difference between two dates
+- Countdown timer
 
 ---
 
-## 🧰 Basic Utility Tools
+## ▶️ How to Run
 
-- **🌡️ Unit Converter** – Convert between temperature, weight, length units.
-- **🕹️ Guessing Game** – A fun number guessing game.
-- **🔐 Cipher Tool** – Caesar cipher encryption and decryption.
-- **🎂 DOB Utility** – Calculate age and time until next birthday.
-- **🎲 Random Tools** – Dice roller, coin toss, lottery picker, etc.
-
----
-
-## 🚀 How to Run
-
-Make sure Python is installed on your system. Then, from the root of the project:
+1. Make sure you have Python 3 installed.
+2. Clone or download the repository.
+3. Install dependencies:
 
 ```bash
-python main.py
+pip install python-dateutil numpy
+
+---
+```
+Let me know if you want badges (e.g. for Python version, license), screenshots, or instructions for packaging this as an installable module or EXE.
+
+Contact me: rseetharaman293@gmail.com
