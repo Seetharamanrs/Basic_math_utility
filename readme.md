@@ -1,53 +1,40 @@
-# 🧮 Math Utility Toolkit
+# 🛠️ Python Utility Toolkit
 
-A Python-based console application that brings together three major mathematical tools using Object-Oriented Programming (OOP):
+A modular, beginner-friendly collection of Python tools combining **math-based** and **basic utility** features. This repository brings together several handy scripts, grouped into two main categories:
 
-- 🔢 Calculator (basic operations, factorial, square root, etc.)
-- 📐 Geometry Helper (area & perimeter for shapes)
-- 📊 Statistics Toolkit (mean, median, mode, range)
-- 🧮 Quadratic Equation Solver
-- 📐 Geometric series,Arithmetic series, Fibonacci series
+- 🧮 **Math Utility Tools**
+- 🧰 **Basic Utility Tools**
+
 ---
 
 ## 📁 Project Structure
+
 ---
 
-## 🚀 Features
+## 🔢 Math Utility Tools
 
-### ✅ Calculator
-- Addition, Subtraction, Multiplication, Division
-- Square, Square Roots 
-- Factorial
+- **📐 Geometry Calculator** – Area & perimeter for circle, triangle, and rectangle.
+- **🧮 Calculator** – Basic arithmetic, square root, factorial, etc.
+- **📊 Statistics Toolkit** – Mean, Median, Mode, Range.
+- **🧠 Quadratic Solver** – Solve and classify roots of quadratic equations.
+- **📈 Matrix Operations** – Add, subtract, transpose matrices.
+- **🔬 Scientific Calculator** – Trigonometric functions, log, exp.
 
-### ✅ Geometry
-- Area and Perimeter of:
-  - Circle
-  - Rectangle
-  - Traingles 
-
-### ✅ Statistics
-- Mean
-- Median
-- Mode
-- Range
-
-### ✅Quadratic Solver 
-- Calculates discriminant to determine root types
-
-### ✅Aritmetic sequence generator 
-- Generates the arithmetic series 
-
-### ✅ Geometric sequence generator 
-- Generate the geometric series
-### ✅ Fibonnaci sequence generator 
-- Generate Fibonnaci series
 ---
 
-## 🖥️ How to Run
+## 🧰 Basic Utility Tools
 
-Make sure you have Python installed. Then:
+- **🌡️ Unit Converter** – Convert between temperature, weight, length units.
+- **🕹️ Guessing Game** – A fun number guessing game.
+- **🔐 Cipher Tool** – Caesar cipher encryption and decryption.
+- **🎂 DOB Utility** – Calculate age and time until next birthday.
+- **🎲 Random Tools** – Dice roller, coin toss, lottery picker, etc.
+
+---
+
+## 🚀 How to Run
+
+Make sure Python is installed on your system. Then, from the root of the project:
 
 ```bash
-main.py
-
-math_utility_tool.ipynb version also available  
+python main.py
