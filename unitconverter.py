@@ -5,10 +5,10 @@ class unitconverter:
         b=b.lower()
         if b=="fahrenheit":
             f=(a-32)*(5/9)
-            return round(f,2)
+            return f" {f:.2f} Celsius"
         elif b=="celsius":
             c=(a*(9/5))+32
-            return round(c,2)
+            return f"{c:.2f} Fahrenheit"
         else:
             return "INVALID!!"
     def weight(self,a,b):
