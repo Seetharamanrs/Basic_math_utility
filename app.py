@@ -8,6 +8,7 @@ from sci_cal import scicalculator
 
 def main():
        uc=unitconverter()
+       c=cipher()
        tools=["Unit Conventer",
            "Cipher tools",
            "Random games",

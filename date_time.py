@@ -14,14 +14,14 @@ class dob:
     today=date.today()
     n=relativedelta(n_b,today)
     return n.years ,n.months,n.days
-  def d_two(self):
+  def d_two(self,b1,b2):
     try:
-      y1=list(map(int,input("Enter the date 1 format as YYYY:MM:DD ").split(":")))
-      y2=list(map(int,input("Enter the date 2 format as YYYY:MM:DD ").split(":")))
+      y1=list(map(int,b1.split(":")))
+      y2=list(map(int,b2.split(":")))
       a1=date(y1[0],y1[1],y1[2])
       a2=date(y2[0],y2[1],y2[2])
       n=relativedelta(a1,a2)
-      return n.years , n.months,n.days
+      return f"{n.years} years , {n.months} months,{n.days} days"
     except (ValueError,IndexError):
       print("Enter the valid input format is YYYY:MM:DD!")
   def coutertime(self,m):
