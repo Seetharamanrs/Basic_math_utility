@@ -8,7 +8,7 @@ from sci_cal import scicalculator
 
 def main():
        uc=unitconverter()
-       c=cipher()
+       cip_obj=cipher()
        tools=["Unit Conventer",
            "Cipher tools",
            "Random games",
@@ -36,10 +36,74 @@ def main():
        if choice=="Cipher tools":
               op=st.selectbox("opertions",["Encrypt","Decrypt"])
               a=st.number_input("Enter the key")
-                  
-
-    
-    
+              text=st.text_input("Enter the Text")
+              if st.button("Solve"):
+                     if op=="Encrypt":    
+                            st.write(cip_obj.en_cipher(a,text))
+                     if op=="Decrypt":
+                            st.write(cip_obj.de_cipher(a,text))
+       if choice=="Age and date calculator":
+              dob_obj=dob()
+              oper=st.selectbox("Operations",["Age calculator","Time until next birthday or specific day",
+                                              "Difference between two day","Counter timer"])   
+              if oper in ["Age calculator","Time until next birthday or specific day"]:
+                     y=st.number_input("YYYY",value=1)
+                     m=st.number_input("MM",value=1)
+                     d=st.number_input("DD",value=1)
+              elif oper in ["Counter timer"]:
+                     c=st.number_input("Timer counter in min")
+              elif oper in ["Difference between two day"]:
+                     y1=st.text_input("Format in YYYY:MM:DD ")
+                     y2=st.text_input("Format in YYYY:MM:DD")
+              if st.button("Calculate"):
+                     if oper=="Age calculator":
+                            st.success(dob_obj.do(y,m,d))
+                     elif oper =="Time until next birthday or specific day":
+                            st.success(dob_obj.u_n_b(y,m,d))
+                     elif oper=="Difference between two day":
+                            st.success(dob_obj.d_two(y1,y2))
+                     elif oper=="Counter timer":
+                            st.write(dob_obj.coutertime(c))
+       if choice=="Random games":
+              g=guess_number()
+              oper=st.selectbox("Operations",["Guess the number","Dice roller","lottery","coin toss"])
+              if oper in ["Guess the number"]:
+                     y=st.number_input("Enter the number")
+              elif oper in ["lottery"]:
+                 s=st.number_input("Enter the max number")
+                 n=st.number_input("Enter how many number to select")
+              if st.button("Calculate"):
+                     if oper =="Guess the number":
+                            st.success(g.guess(y))
+                     elif oper=="Dice roller":
+                            st.success(g.dice_roller())
+                     elif oper=="lottery":
+                            st.success(g.lottery(s,n))
+                     elif oper=="coin toss":
+                            st.success(g.coin_toss())
+       if choice=="Scientific calculator":
+              s=scicalculator()
+              oper=st.selectbox("opertions",["Sin","Cos","Tan","Exp","log"])
+              if oper in ["Sin","Cos","Tan","Exp"]:
+                     n=st.number_input("Enter the Value")
+              elif oper in ["log"]:
+                     n=st.number_input("Enter value:")
+                     b=st.number_input("Enter base:")
+              if st.button("Solve"):
+                     if oper=="Sin":
+                            st.success(s.sin(n))
+                     elif oper=="Cos":
+                            st.success(s.cos(n))
+                     elif oper=="Tan":
+                            st.success(s.tan(n))
+                     elif oper=="Exp":
+                            st.success(s.exp(n))
+                     elif oper=="log":
+                            st.sucess(s.log(n,b))
+       if choice=="Matirx calculator":
+              m=matrix()                   
+                     
+                     
     
 if __name__=="__main__":
        main()

@@ -131,33 +131,7 @@ def matrix_menu():
     else:
       print("Invalid choice.")
 
-def matrix_menu():
-    m = matrix()
-    print("\n-- Matrix Calculator --")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Manual Addition (No Numpy)")
-    print("4. Transpose")
-    ch = input("Choose operation: ")
-    def read_matrix(name):
-      r = int(input(f"Enter rows for matrix {name}: "))
-      c = int(input(f"Enter cols for matrix {name}: "))
-      print(f"Enter values row-wise for matrix {name}:")
-      return [[int(input()) for _ in range(c)] for _ in range(r)]
-    if ch in ["1", "2", "3"]:
-          a = read_matrix("A")
-          b = read_matrix("B")
-          if ch == "1":
-            print("Result:\n", m.addition(a, b))
-          elif ch == "2":
-            print("Result:\n", m.sub(a, b))
-          elif ch == "3":
-            print("Result:\n", m.addi(a, b))
-    elif ch == "4":
-      a = read_matrix("A")
-      print("Transpose:\n", m.tran(a))
-    else:
-      print("Invalid choice.")
+
 def main():
   while True:
     print("\n--Main Menu--")
