@@ -8,6 +8,7 @@ from ceaser_cipher import cipher
 from sci_cal import scicalculator
 
 def main():
+       st.title("Basic Math Utility ")
        uc=unitconverter()
        cip_obj=cipher()
        tools=["Unit Conventer",
@@ -36,16 +37,16 @@ def main():
                             st.success(uc.length(a,unit))
        if choice=="Cipher tools":
               op=st.selectbox("opertions",["Encrypt","Decrypt"])
-              a=st.number_input("Enter the key")
+              a=st.number_input("Enter the key",value=0)
               text=st.text_input("Enter the Text")
               if st.button("Solve"):
                      if op=="Encrypt":    
-                            st.write(cip_obj.en_cipher(a,text))
+                            st.success(cip_obj.en_cipher(a,text))
                      if op=="Decrypt":
-                            st.write(cip_obj.de_cipher(a,text))
+                            st.success(cip_obj.de_cipher(a,text))
        if choice=="Age and date calculator":
               dob_obj=dob()
-              oper=st.selectbox("Operations"["Age calulator","Time until next birthday or specific day",
+              oper=st.selectbox("Operations",["Age calculator","Time until next birthday or specific day",
                                               "Difference between two day","Counter timer"])   
               if oper in ["Age calculator","Time until next birthday or specific day"]:
                      y=st.number_input("YYYY",value=1)
