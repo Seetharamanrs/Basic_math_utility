@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from unitconverter import unitconverter
 from matrix import matrix
 from date_time import dob
@@ -116,7 +117,7 @@ def main():
                             mat.append(row)
                      return mat
               def display_matrix(mat, label="Matrix"):
-                     import pandas as pd
+
                      df = pd.DataFrame(mat)
                      st.write(label)
                      st.dataframe(df)
