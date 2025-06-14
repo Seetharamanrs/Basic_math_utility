@@ -44,7 +44,7 @@ def main():
                             st.write(cip_obj.de_cipher(a,text))
        if choice=="Age and date calculator":
               dob_obj=dob()
-              oper=st.selectbox("Operations",["Age calculator","Time until next birthday or specific day",
+              oper=st.selectbox("Operations"["Age calulator","Time until next birthday or specific day",
                                               "Difference between two day","Counter timer"])   
               if oper in ["Age calculator","Time until next birthday or specific day"]:
                      y=st.number_input("YYYY",value=1)
@@ -102,8 +102,47 @@ def main():
                             st.sucess(s.log(n,b))
        if choice=="Matirx calculator":
               m=matrix()                   
-                     
-                     
+              oper=st.selectbox("Operations",["Addition","Subraction","Transpose"])
+              def get_mat(name):
+                     rows=st.number_input(f'Rows for matrix {name}',min_value=1,step=1,key=f"{name}_rows")
+                     col=st.number_input(f"Cols for matrix {name} ",min_value=1,step=1,key=f"{name}_columns")
+                     mat=[]
+                     st.write(f"Enter Values for matrix {name}")
+                     for i in range(rows):
+                            row=[]
+                            for j in range(col):
+                                   val=st.number_input(f"{name}[{i+1}][{j+1}]", key=f"{name}_{i}_{j}",value=1.0)
+                                   row.append(val)
+                            mat.append(row)
+                     return mat
+              def display_matrix(mat, label="Matrix"):
+                     import pandas as pd
+                     df = pd.DataFrame(mat)
+                     st.write(label)
+                     st.dataframe(df)
+              if oper in ["Addition", "Subtraction"]:
+                     mat1 = get_mat("A")
+                     mat2 = get_mat("B")
+                     if st.button("Calculate"):
+                            try:
+                                   if oper == "Addition":
+                                          result = m.addition(mat1, mat2)
+                                   elif oper == "Subtraction":
+                                          result = m.sub(mat1, mat2)
+                                   st.success("Result:")
+                                   display_matrix(result,label="Result")
+                            except Exception as e:
+                                   st.error(f"Error: {e}")
+              
+              elif oper == "Transpose":
+                     mat = get_mat("A")
+                     if st.button("Calculate"):
+                            try:
+                                   result = m.tran(mat)
+                                   st.success("Transpose:")
+                                   display_matrix(result,label="Result")
+                            except Exception as e:
+                                   st.error(f"Error: {e}")
     
 if __name__=="__main__":
        main()
