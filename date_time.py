@@ -1,6 +1,8 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 from time import sleep
+import time
+import streamlit as st
 class dob:
   def __init__(self)->None:
     pass
@@ -8,12 +10,12 @@ class dob:
     dob=date(year,month,day)
     today=date.today()
     r=relativedelta(today,dob)
-    return r.years, r.months,r.days
+    return f"{r.years} years , {r.months} months,{r.days} days"
   def u_n_b(self,year,month,day):
     n_b=date(year,month,day)
     today=date.today()
     n=relativedelta(n_b,today)
-    return n.years ,n.months,n.days
+    return f"{n.years} years , {n.months} months,{n.days} days"
   def d_two(self,b1,b2):
     try:
       y1=list(map(int,b1.split(":")))
@@ -25,7 +27,8 @@ class dob:
     except (ValueError,IndexError):
       print("Enter the valid input format is YYYY:MM:DD!")
   def coutertime(self,m):
+    counter_placeholder = st.empty()# created to update visually like every second 
     for i in range(int(m*60),0,-1):
-      print(i)
-      sleep(1)
-    print("Time Over!!!")
+          counter_placeholder.markdown(f"### Time Remaining: {i} seconds")
+          time.sleep(1)
+    counter_placeholder.markdown("### Time Over!!!")

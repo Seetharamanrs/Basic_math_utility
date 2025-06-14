@@ -4,11 +4,6 @@ A multi-functional Python toolkit that combines various everyday utilities into 
 
 ---
 
-## 📂 Project Structure
-
-
----
-
 ## 🧰 Features
 
 ### 1. **Unit Converter**
@@ -44,15 +39,25 @@ Convert between:
 
 ## ▶️ How to Run
 
+### CLI Version
+
 1. Make sure you have Python 3 installed.
 2. Clone or download the repository.
 3. Install dependencies:
+    ```bash
+    pip install python-dateutil numpy
+    ```
+4. Run the main script:
+    ```bash
+    python main.py
+    ```
 
+### Streamlit Version
+
+To launch the GUI version using Streamlit:
 ```bash
-pip install python-dateutil numpy
-
----
+streamlit run streamlit_app.py
 ```
-Let me know if you want badges (e.g. for Python version, license), screenshots, or instructions for packaging this as an installable module or EXE.
+
 
 Contact me: rseetharaman293@gmail.com
